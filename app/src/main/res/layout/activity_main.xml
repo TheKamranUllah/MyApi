@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/main_bar"
+        layout="@layout/app_bar_layout"/>
+
+    <Button
+        android:id="@+id/online_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/online"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:padding="20dp"
+        android:textAllCaps="false"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/design"
+        android:textColor="@android:color/white"/>
+    <Button
+        android:id="@+id/offline_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/offline"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:padding="20dp"
+        android:layout_below="@+id/online_button"
+        android:background="@drawable/design"
+        android:textColor="@android:color/white"/>
+
+    <Button
+        android:id="@+id/reset_database"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/optional"
+        android:padding="20dp"
+        android:gravity="center"
+        android:textAllCaps="false"
+        android:background="@drawable/design"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/offline_button"
+        android:textColor="@android:color/white"/>
+
+
+</RelativeLayout>
