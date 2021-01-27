@@ -46,8 +46,13 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myViewHolder> {
         holder.name.setText(ourData.getName());
         holder.field_email.setText(ourData.getField_email());
         holder.field_url.setText(ourData.getField_url());
-       Picasso.get().load(ourData.getField_logo()).placeholder(R.drawable.placeholder).into(holder.logo_image);
-
+try {
+    Picasso.get().load(ourData.getField_logo()).placeholder(R.drawable.placeholder).into(holder.logo_image);
+}
+catch (IllegalArgumentException e){e.printStackTrace();}
+catch (NullPointerException e){e.printStackTrace();}
+catch (RuntimeException e){e.printStackTrace();}
+   
     }
 
     @Override
