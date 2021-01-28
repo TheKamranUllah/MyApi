@@ -10,6 +10,13 @@
         android:id="@+id/main_bar_online"
         layout="@layout/app_bar_layout"/>
 
+    <ProgressBar
+        android:id="@+id/progress_circular_online"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent ="true"
+        android:indeterminateTint="@color/appbar"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/data_container"
         android:layout_width="409dp"

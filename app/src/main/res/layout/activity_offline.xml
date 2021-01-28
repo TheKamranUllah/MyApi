@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     android:background="@drawable/background1"
     tools:context=".OfflineActivity">
+
+    <ProgressBar
+        android:id="@+id/progress_circular_offline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent ="true"
+        android:visibility="visible"
+        android:indeterminateTint="@color/appbar"/>
+
     <include
         android:id="@+id/main_bar_offline"
         layout="@layout/app_bar_layout"/>
@@ -19,5 +28,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@layout/custome_layout"/>
+
+
 
 </RelativeLayout>

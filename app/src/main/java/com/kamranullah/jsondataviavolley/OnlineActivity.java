@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +42,7 @@ public class OnlineActivity extends AppCompatActivity {
     private List<myData> theData;
     private static String JSON_URL = "https://www.ggemploi.com/json/employeur";
     private myAdapter adapter;
+    private ProgressBar progressBar;
 
     SQLiteDatabase sqLiteDatabase;
     private androidx.appcompat.widget.Toolbar mToolbar;
@@ -59,6 +61,8 @@ public class OnlineActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.getBackground().setAlpha(84);
+
+        progressBar = (ProgressBar) findViewById(R.id.progress_circular_online);
 
         recyclerView = findViewById(R.id.data_container);
         theData = new ArrayList<>();
@@ -107,7 +111,7 @@ public class OnlineActivity extends AppCompatActivity {
                 adapter = new myAdapter(getApplicationContext(), theData);
                 adapter.notifyDataSetChanged();
                 recyclerView.setAdapter(adapter);
-
+                progressBar.setVisibility(View.INVISIBLE);
 
             }
         }, new Response.ErrorListener() {
